@@ -1,5 +1,5 @@
 # Task-to-do-NodeJS
-A toDo App based on Node JS, express framework, MongoDB and angular JS<br />
+A toDo App based on Node JS, express framework, and MongoDB<br />
 
 1) Find all toDos based on user name:<br />
 Get method: https://localhost:3000/db/findToDos/{name}<br />
