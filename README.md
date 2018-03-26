@@ -31,3 +31,11 @@ Delete method: https://localhost:3000/db/todo <br/>
 {
   "id": {id},
 }
+
+ ### Setup ###
+ 1) Enable MongoDB services in local and set port to be 27017.
+ 2) Create a DB named "toDoDB".
+ 3) Create a collection named "toDos".
+ 4) Install Node Js on local host.
+ 5) Use below cmd in terminal at directory of task-to-do folder.<br />
+ "node task-to-do".
