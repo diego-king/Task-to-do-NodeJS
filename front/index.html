@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task To Do</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="./script/toDoApp.js"></script>
+    <script src="./script/toDoController.js"></script>
+    <script src="./script/utils.js"></script>
+    <link rel="stylesheet" type="text/css" href="./style/toDoStyle.css">
+</head>
+<body>
+<div ng-app="toDo" ng-controller="toDoControl" ng-init="loadNames();newToDo={};newToDo.isDone=false;">
+    <h4>To Do Mangement</h4>
+    <table style="width:350px;"> 
+        <tr>
+            <th>Find ToDos</th>
+            <th>Add New Todo</th>
+        </tr>
+        <tr>
+            <td>Name：<select ng-model="name" ng-change="findToDos();" ng-options="x for x in names"></select></td>
+            <td><form name="newToDoForm"><span>
+                Name: <input name="new_name" ng-model="newToDo.name" type="text" required/><br />
+                Task: <input name="new_name" ng-model="newToDo.task" type="text" required/><br />
+                Deadline: <input name="new_deadline" ng-model="newToDo.deadline" type="date" required/><br/>
+                <button ng-click="createNewToDo()">New To Do</button>
+            </form></span></td>
+        </tr>
+    </table>
+    <p>List of ToDos</p>
+    <p><ul>
+        <li ng-repeat="x in toDos"><span>
+            task: {{x.task}}<br />
+            complete: {{x.isDone}}<br />
+            deadline: {{x.deadline}}<br />
+            <button ng-click="updateToDo(x);">{{x.isDone? "Undone":"Marked Done"}}</button>
+            <button ng-click="removeToDo(x._id);">Remove</button>
+        </span></li>
+    </ul></p>
+</div>
+</body>
+</html>

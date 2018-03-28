@@ -8,4 +8,5 @@ var app = express();
 var port = 3000;
 app.set('View engine', 'ejs');
 app.use('/db', dbRouter);
+app.use('/', express.static(__dirname + "/front"));
 app.listen(port);

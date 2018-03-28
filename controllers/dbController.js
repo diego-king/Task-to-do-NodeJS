@@ -62,13 +62,24 @@ router.put('/todo', function(req, res) {
     });
 });
 
-router.delete('/todo', function(req, res) {
-    toDoModel.findByIdAndRemove(req.body.id, function(err) {
+router.delete('/todo/:id', function(req, res) {
+    toDoModel.findByIdAndRemove(req.params.id, function(err) {
         if (err) {
             res.send('fail');
             console.error(err.message);
         } else {
             res.send('OK');
+        }
+    });
+});
+
+router.get('/names', function(req, res) {
+    toDoModel.find({}).distinct('name', function(err, toDos) {
+        if (err) {
+            res.send('fail');
+            console.error(err.message);
+        } else {
+            res.send(toDos);
         }
     });
 });
