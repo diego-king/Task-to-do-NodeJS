@@ -1,6 +1,9 @@
 # Task-to-do-NodeJS
-A toDo App based on Node JS, express framework, and MongoDB<br />
+A toDo App based on Node JS, express framework, MongoDB, and Angular JS<br />
 
+### Demo video ###
+
+### back-end services API ###
 1) Find all toDos based on user name:<br />
 Get method: https://localhost:3000/db/findToDos/{name}<br />
 
@@ -27,10 +30,7 @@ Put method: https://localhost:3000/db/todo <br/>
 }
 
 5) Remove a toDo in DB:<br />
-Delete method: https://localhost:3000/db/todo <br/>
-{
-  "id": {id},
-}
+Delete method: https://localhost:3000/db/todo/{id} <br/>
 
  ### Setup ###
  1) Enable MongoDB services in local and set port to be 27017.
