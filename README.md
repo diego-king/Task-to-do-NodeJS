@@ -2,6 +2,7 @@
 A toDo App based on Node JS, express framework, MongoDB, and Angular JS<br />
 
 ### Demo video ###
+[![Task To Do Demo Video](https://i.ytimg.com/vi/wZpDt4BXdbM/hqdefault.jpg)](https://youtu.be/wZpDt4BXdbM)
 
 ### back-end services API ###
 1) Find all toDos based on user name:<br />
